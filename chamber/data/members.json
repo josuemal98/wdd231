@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Herriman Grocery Store",
+    "address": "5560 W 13400 S, Herriman, UT 84096",
+    "phone": "(801) 254-8208",
+    "website": "https://www.smithsfoodanddrug.com",
+    "image": "images/smiths.png",
+    "level": 3,
+    "founded": 1911
+  },
+  {
+    "name": "Herriman Emergency Center",
+    "address": "13306 S Fort Herriman Pkwy, Herriman, UT 84096",
+    "phone": "(385) 488-5600",
+    "website": "https://www.mountainstar.com",
+    "image": "images/mountainstar.png",
+    "level": 2,
+    "founded": 1999
+  },
+  {
+    "name": "Les Schwab Tire Center",
+    "address": "5232 Anthem Peak Ln, Herriman, UT 84096",
+    "phone": "(385) 529-5552",
+    "website": "https://www.lesschwab.com",
+    "image": "images/tires.png",
+    "level": 1,
+    "founded": 2019
+  },
+  {
+    "name": "Los Tapatios Taco Grill",
+    "address": "5418  Main St, Herriman, UT 84096",
+    "phone": "(385) 281-0184",
+    "website": "https://www.tapatiostaco.com",
+    "image": "images/tapatios.jpeg",
+    "level": 3,
+    "founded": 2020
+  },
+  {
+    "name": "Kneaders Bakery & Cafe",
+    "address": "5083 13400 S, Herriman, UT 84096",
+    "phone": "(801) 253-1060",
+    "website": "https://www.kneaders.com",
+    "image": "images/kneaders.jpeg",
+    "level": 1,
+    "founded": 1997
+  },
+  {
+    "name": "Walgreens",
+    "address": "5627 13400 S, Herriman, UT 84096",
+    "phone": "(801) 307-1909",
+    "website": "https://www.walgreens.com",
+    "image": "images/walgreens.png",
+    "level": 2,
+    "founded": 1901
+  },
+  {
+    "name": "Galaxy of Games",
+    "address": "12488 S Rosecrest, Herriman, UT 84096",
+    "phone": "(801) 332-9889",
+    "website": "https://galaxyof.games",
+    "image": "images/games.jpeg",
+    "level": 3,
+    "founded": 2010
+  }
+]

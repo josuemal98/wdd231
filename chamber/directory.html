@@ -1,16 +1,59 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Herriman City Chamber of Commerce - Directory</title>
-    <meta name="description" content="Business directory for the Herriman Chamber of Commerce. Support and connect with loca businesses in Herriman, Utah.">
+    <title>Herriman Chamber of Commerce - Directory</title>
+    <meta name="description" content="Business directory for the Herriman Chamber of Commerce. Support and connect with local businesses in Herriman, Utah.">
     <meta name="author" content="Josue Maldonado">
 
     <link rel="icon" href="favicon.ico">
+    
+    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css" media="(min-width: 640px)">
-    <link rel="stylesheet" href="styles/normalize.css">
 
-</head>    
+    <meta property="og:title" content="Herriman Chamber of Commerce Directory">
+    <meta property="og:description" content="Find and support local businesses in the Herriman community. View our member directory.">
+    <meta property="og:image" content="https://josuemal98.github.io/wdd231/chamber/images/share-preview.jpg">
+    <meta property="og:url" content="https://josuemal98.github.io/wdd231/chamber/directory.html">
+    <meta property="og:type" content="website">
+</head>
+
+<body>
+
+    <header>
+        <h1>Herriman Chamber of Commerce</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="directory.html" class="active">Directory</a></li>
+            <li><a href="#">Join</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Business Directory</h2>
+
+        <div class="menu">
+            <button id="grid">Grid View</button>
+            <button id="list">List View</button>
+        </div>
+
+        <div id="directory-container" class="grid">
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Herriman Chamber of Commerce | Josue Maldonado | Herriman, Utah</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+    </footer>
+
+    <script src="scripts/directory.js"></script>
+</body>
+
 </html>
