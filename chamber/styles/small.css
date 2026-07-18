@@ -137,3 +137,26 @@ footer {
 footer p {
     margin: 5px 0;
 }
+
+#menuButton {
+  display: block;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: inherit; 
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  text-align: left;
+}
+
+#navLinks {
+  display: none; 
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-direction: column;
+}
+
+#navLinks.open {
+  display: flex; 
+}

@@ -1,3 +1,16 @@
+const menuButton = document.querySelector("#menuButton");
+const navLinks = document.querySelector("#navLinks");
+
+menuButton.addEventListener("click", () => {
+  navLinks.classList.toggle("open");
+  
+  if (navLinks.classList.contains("open")) {
+    menuButton.innerHTML = "&times;"; 
+  } else {
+    menuButton.innerHTML = "&#9776;";
+  }
+});
+
 const url = "data/members.json";
 const container = document.querySelector("#directory-container");
 const gridButton = document.querySelector("#grid");

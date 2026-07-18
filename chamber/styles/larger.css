@@ -26,3 +26,12 @@ footer {
 footer p {
     margin: 0;
 }
+
+#menuButton {
+  display: none; 
+}
+
+#navLinks {
+  display: flex !important; 
+  flex-direction: row;     
+}
