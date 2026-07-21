@@ -4,25 +4,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Herriman Chamber of Commerce - Directory</title>
-    <meta name="description" content="Business directory for the Herriman Chamber of Commerce. Support and connect with local businesses in Herriman, Utah.">
+    <title>Herriman Chamber of Commerce - Home</title>
+    <meta name="description"
+        content="Welcome to the Herriman Chamber of Commerce. Connecting, supporting, and growing local businesses in Herriman, Utah.">
     <meta name="author" content="Josue Maldonado">
 
     <link rel="icon" href="favicon.ico">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lucida+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Lucida+Sans:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css" media="(min-width: 640px)">
 
-    <meta property="og:title" content="Herriman Chamber of Commerce Directory">
-    <meta property="og:description" content="Find and support local businesses in the Herriman community. View our member directory.">
+    <meta property="og:title" content="Herriman Chamber of Commerce - Home">
+    <meta property="og:description"
+        content="Welcome to the Herriman Chamber of Commerce. Explore events, local weather, and featured business spotlights.">
     <meta property="og:image" content="https://josuemal98.github.io/wdd231/chamber/images/share-preview.png">
-    <meta property="og:url" content="https://josuemal98.github.io/wdd231/chamber/directory.html">
+    <meta property="og:url" content="https://josuemal98.github.io/wdd231/chamber/index.html">
     <meta property="og:type" content="website">
 
-    <script src="scripts/directory.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/home.js" defer></script>`
 </head>
+
+<body>
+
+    <header>
+        <h1>Herriman Chamber of Commerce</h1>
+    </header>
+
+    <nav>
+        <button id="menuButton">&#9776;</button>
+        <ul id="navLinks">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="#">Join</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="home-grid">
+        <section class="hero-container">
+            <picture>
+                <source media="(min-width: 640px)" srcset="images/hero-large.jpg">
+                <img src="images/hero-small.jpeg" alt="Scenic view of the Herriman Utah mountain valley landscape"
+                    class="hero-image">
+            </picture>
+            <div class="cta-overlay">
+                <h3>Grow Your Business with Us</h3>
+                <a href="#" class="cta-button">Join the Chamber</a>
+            </div>
+        </section>
+
+        <section class="events-card">
+            <h2>Upcoming Events</h2>
+            <div id="events-container">
+                <article class="event-item">
+                    <h4>Chamber Networking Luncheon</h4>
+                    <p>Date: Next Wednesday at 12:00 PM</p>
+                    <p>Location: Herriman Community Center</p>
+                </article>
+                <article class="event-item">
+                    <h4>Local Business Expo</h4>
+                    <p>Date: Next Month, Saturday at 10:00 AM</p>
+                    <p>Location: W&M Butterfield Park</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="weather-card">
+            <h2>Herriman Weather</h2>
+            <div id="weather-current">
+                <p>Current Temperature: <span id="current-temp">--</span>&deg;F</p>
+                <p>Condition: <span id="weather-desc">--</span></p>
+            </div>
+            <hr>
+            <h3>3-Day Forecast</h3>
+            <div id="weather-forecast"></div>
+        </section>
+
+        <section class="spotlights-card">
+            <h2>Business Spotlights</h2>
+            <div id="spotlights-container"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Herriman Chamber of Commerce | Josue Maldonado | Herriman, Utah</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+    </footer>
+
+</body>
+
+</html>
