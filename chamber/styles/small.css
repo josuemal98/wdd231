@@ -55,7 +55,8 @@ nav ul li a {
     font-weight: bold;
 }
 
-nav ul li a:hover, nav ul li a.active {
+nav ul li a:hover, 
+nav ul li a.active {
     background-color: #0b2240;
     color: #ffffff;
 }
@@ -202,4 +203,24 @@ footer {
 
 footer p {
     margin: 5px 0;
+}
+
+
+@media (min-width: 640px) {
+
+    #menuButton {
+        display: none;
+    }
+
+
+    #navLinks {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        background-color: transparent;
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
 }
