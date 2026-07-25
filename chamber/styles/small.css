@@ -204,3 +204,26 @@ footer {
 footer p {
     margin: 5px 0;
 }
+
+#spotlight-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.spotlight-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.spotlight-card img {
+    max-width: 120px;
+    height: auto;
+    object-fit: contain;
+    margin: 10px auto;
+    display: block;
+}

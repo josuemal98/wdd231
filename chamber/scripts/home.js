@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    
+
     const menuButton = document.querySelector("#menuButton");
     const navLinks = document.querySelector("#navLinks");
 
@@ -36,27 +36,31 @@ document.addEventListener("DOMContentLoaded", () => {
             const responseCurrent = await fetch(currentWeatherUrl);
             if (responseCurrent.ok) {
                 const currentData = await responseCurrent.json();
-                document.querySelector("#current-temp").textContent = Math.round(currentData.main.temp);
-                document.querySelector("#weather-desc").textContent = currentData.weather[0].description;
+                const tempElem = document.querySelector("#current-temp");
+                const descElem = document.querySelector("#weather-desc");
+                if (tempElem) tempElem.textContent = Math.round(currentData.main.temp);
+                if (descElem) descElem.textContent = currentData.weather[0].description;
             }
 
             const responseForecast = await fetch(forecastUrl);
             if (responseForecast.ok) {
                 const forecastData = await responseForecast.json();
                 const forecastContainer = document.querySelector("#weather-forecast");
-                forecastContainer.innerHTML = "";
-                
-                const dailyData = forecastData.list.filter(item => item.dt_txt.includes("12:00:00")).slice(0, 3);
-                
-                dailyData.forEach(day => {
-                    const date = new Date(day.dt * 1000);
-                    const dayName = date.toLocaleDateString("en-US", { weekday: "long" });
-                    const temp = Math.round(day.main.temp);
+                if (forecastContainer) {
+                    forecastContainer.innerHTML = "";
                     
-                    const p = document.createElement("p");
-                    p.innerHTML = `<strong>${dayName}:</strong> ${temp}&deg;F`;
-                    forecastContainer.appendChild(p);
-                });
+                    const dailyData = forecastData.list.filter(item => item.dt_txt.includes("12:00:00")).slice(0, 3);
+                    
+                    dailyData.forEach(day => {
+                        const date = new Date(day.dt * 1000);
+                        const dayName = date.toLocaleDateString("en-US", { weekday: "long" });
+                        const temp = Math.round(day.main.temp);
+                        
+                        const p = document.createElement("p");
+                        p.innerHTML = `<strong>${dayName}:</strong> ${temp}&deg;F`;
+                        forecastContainer.appendChild(p);
+                    });
+                }
             }
         } catch (error) {
             console.error("Error fetching weather data:", error);
@@ -64,33 +68,40 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const membersUrl = "data/members.json";
-    const spotlightsContainer = document.querySelector("#spotlights-container");
+    const spotlightsContainer = document.querySelector("#spotlights-container") || document.querySelector("#spotlight-container");
 
     async function getSpotlights() {
         try {
             const response = await fetch(membersUrl);
+            if (!response.ok) return;
+
             const data = await response.json();
-            
-            const eligibleMembers = data.members.filter(m => 
-                m.membershipLevel.toLowerCase() === "gold" || 
-                m.membershipLevel.toLowerCase() === "silver"
-            );
-            
-            const shuffled = eligibleMembers.sort(() => 0.5 - Math.random());
-            const selectedSpotlights = shuffled.slice(0, 3);
-            
+            const membersList = Array.isArray(data) ? data : (data.members || []);
+
+            const eligibleMembers = membersList.filter(m => {
+                const lvl = String(m.membershipLevel || m.membership_level || "").toLowerCase();
+                return lvl === "gold" || lvl === "silver" || lvl === "2" || lvl === "3";
+            });
+
+            eligibleMembers.sort(() => 0.5 - Math.random());
+            const selectedSpotlights = eligibleMembers.slice(0, 3);
+
             if (spotlightsContainer) {
                 spotlightsContainer.innerHTML = "";
                 selectedSpotlights.forEach(member => {
                     const spotlight = document.createElement("article");
                     spotlight.className = "spotlight-item";
+                    
+                    const imageSrc = member.image ? `images/${member.image}` : (member.logo || "");
+                    const lvlDisplay = (String(member.membershipLevel) === "3" || String(member.membershipLevel).toLowerCase() === "gold") ? "Gold" : "Silver";
+
                     spotlight.innerHTML = `
                         <h3>${member.name}</h3>
-                        <img src="images/${member.image}" alt="${member.name} logo" loading="lazy">
+                        <img src="${imageSrc}" alt="${member.name} logo" loading="lazy" width="120" height="80">
                         <p><strong>Phone:</strong> ${member.phone}</p>
                         <p><strong>Address:</strong> ${member.address}</p>
-                        <a href="${member.website}" target="_blank">Website</a>
-                        <p class="level-badge">${member.membershipLevel} Member</p>
+                        <a href="${member.website}" target="_blank" rel="noopener">Website</a>
+                        <p class="level-badge">${lvlDisplay} Member</p>
                     `;
                     spotlightsContainer.appendChild(spotlight);
                 });
