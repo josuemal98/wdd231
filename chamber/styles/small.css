@@ -13,7 +13,8 @@ header {
     text-align: center;
 }
 
-header h1 {
+header h1,
+header .site-title {
     margin: 0;
     font-size: 24px;
 }
@@ -22,10 +23,27 @@ nav {
     background-color: #1a365d;
 }
 
-nav ul {
+#menuButton {
+    display: block;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #ffffff; 
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    text-align: left;
+}
+
+#navLinks {
+    display: none; 
     list-style-type: none;
-    margin: 0;
     padding: 0;
+    margin: 0;
+    flex-direction: column;
+}
+
+#navLinks.open {
+    display: flex; 
 }
 
 nav ul li a {
@@ -52,6 +70,54 @@ main h2 {
     color: #0b2240;
     border-bottom: 2px solid #1a365d;
     padding-bottom: 5px;
+}
+
+.hero-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.cta-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(11, 34, 64, 0.85);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    color: #ffffff;
+    width: 80%;
+    max-width: 300px;
+}
+
+.cta-overlay h2 {
+    color: #ffffff;
+    border-bottom: none;
+    margin: 0 0 10px 0;
+    padding: 0;
+    font-size: 1.2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #0b2240;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.cta-button:hover {
+    background-color: #f4f4f4;
 }
 
 .menu {
@@ -136,27 +202,4 @@ footer {
 
 footer p {
     margin: 5px 0;
-}
-
-#menuButton {
-  display: block;
-  font-size: 2rem;
-  background: none;
-  border: none;
-  color: inherit; 
-  cursor: pointer;
-  padding: 0.5rem 1rem;
-  text-align: left;
-}
-
-#navLinks {
-  display: none; 
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  flex-direction: column;
-}
-
-#navLinks.open {
-  display: flex; 
 }
