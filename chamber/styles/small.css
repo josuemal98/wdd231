@@ -204,23 +204,3 @@ footer {
 footer p {
     margin: 5px 0;
 }
-
-
-@media (min-width: 640px) {
-
-    #menuButton {
-        display: none;
-    }
-
-
-    #navLinks {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        background-color: transparent;
-    }
-
-    nav ul li {
-        margin: 0 10px;
-    }
-}

@@ -1,37 +1,21 @@
-header h1 {
-    font-size: 36px;
+#menuButton {
+    display: none;
 }
 
-nav ul {
+#navLinks {
     display: flex;
+    flex-direction: row;
     justify-content: center;
 }
 
-nav ul li {
-    width: 150px;
-}
-
 #directory-container.grid {
-    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
 }
 
 footer {
-    display: flex;
-    justify-content: space-between;
     padding: 20px 40px;
 }
 
 footer p {
     margin: 0;
-}
-
-#menuButton {
-  display: none; 
-}
-
-#navLinks {
-  display: flex !important; 
-  flex-direction: row;     
 }
