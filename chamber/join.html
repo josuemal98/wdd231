@@ -5,31 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Herriman Chamber of Commerce - Join</title>
-    <meta name="description"
-        content="Welcome to the Herriman Chamber of Commerce. Connecting, supporting, and growing local businesses in Herriman, Utah.">
+    <meta name="description" content="Join the Herriman Chamber of Commerce. Choose a membership level and grow your business today.">
     <meta name="author" content="Josue Maldonado">
 
     <link rel="icon" href="favicon.ico">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lucida+Sans:ital,wght@0,400;0,700;1,400&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lucida+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css" media="(min-width: 640px)">
 
-    <meta property="og:title" content="Herriman Chamber of Commerce - Home">
-    <meta property="og:description"
-        content="Welcome to the Herriman Chamber of Commerce. Explore events, local weather, and featured business spotlights.">
-    <meta property="og:image" content="https://josuemal98.github.io/wdd231/chamber/images/share-preview.png">
-    <meta property="og:url" content="https://josuemal98.github.io/wdd231/chamber/index.html">
-    <meta property="og:type" content="website">
-
-    <script src="scripts/directory.js" defer></script>
-    <script src="scripts/home.js" defer></script>
     <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/join.js" defer></script>
 </head>
 
 <body>
@@ -39,18 +29,150 @@
     </header>
 
     <nav>
-        <button id="menuButton">&#9776;</button>
+        <button id="menuButton" aria-label="Toggle Navigation Menu">&#9776;</button>
         <ul id="navLinks">
-            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="directory.html">Directory</a></li>
-            <li><a href="join.html">Join</a></li>
+            <li><a href="join.html" class="active">Join</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
     </nav>
 
+    <main class="join-page">
+        <h2>Membership Application</h2>
 
+        <div class="join-container">
+            <form action="thankyou.html" method="get" class="join-form">
+                <label>First Name
+                    <input type="text" name="fname" required autocomplete="given-name" title="Enter your first name">
+                </label>
+
+                <label>Last Name
+                    <input type="text" name="lname" required autocomplete="family-name" title="Enter your last name">
+                </label>
+
+                <label>Organizational Title
+                    <input type="text" name="title" autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}" title="Minimum 7 characters (letters, spaces, hyphens only)">
+                </label>
+
+                <label>Email Address
+                    <input type="email" name="email" required autocomplete="email" placeholder="john.doe@example.com" title="Enter a valid email address">
+                </label>
+
+                <label>Mobile Phone Number
+                    <input type="tel" name="phone" required autocomplete="tel" title="Enter your phone number">
+                </label>
+
+                <label>Business / Organization Name
+                    <input type="text" name="organization" required autocomplete="organization" title="Enter your business name">
+                </label>
+
+                <label>Membership Level
+                    <select name="membership" required title="Select a membership level">
+                        <option value="" disabled selected>Select a membership level...</option>
+                        <option value="np">NP Membership (Free for Non-Profits)</option>
+                        <option value="bronze">Bronze Membership</option>
+                        <option value="silver">Silver Membership</option>
+                        <option value="gold">Gold Membership</option>
+                    </select>
+                </label>
+
+                <label>Business / Organization Description
+                    <textarea name="description" rows="4" title="Briefly describe your organization"></textarea>
+                </label>
+
+                <input type="hidden" name="timestamp" id="timestamp">
+
+                <input type="submit" value="Submit Application" class="submit-btn">
+            </form>
+
+            <section class="membership-cards">
+                <h3>Membership Levels</h3>
+
+                <div class="card np-card">
+                    <h4>NP Membership</h4>
+                    <p>Free for Non-Profit Organizations</p>
+                    <button class="info-btn" data-modal="modal-np" aria-label="Learn more about NP Membership">Learn More</button>
+                </div>
+
+                <div class="card bronze-card">
+                    <h4>Bronze Membership</h4>
+                    <p>Essential benefits for small businesses</p>
+                    <button class="info-btn" data-modal="modal-bronze" aria-label="Learn more about Bronze Membership">Learn More</button>
+                </div>
+
+                <div class="card silver-card">
+                    <h4>Silver Membership</h4>
+                    <p>Enhanced visibility and networking</p>
+                    <button class="info-btn" data-modal="modal-silver" aria-label="Learn more about Silver Membership">Learn More</button>
+                </div>
+
+                <div class="card gold-card">
+                    <h4>Gold Membership</h4>
+                    <p>Maximum exposure and premium perks</p>
+                    <button class="info-btn" data-modal="modal-gold" aria-label="Learn more about Gold Membership">Learn More</button>
+                </div>
+            </section>
+        </div>
+
+        <dialog id="modal-np" aria-label="NP Membership Details">
+            <div class="dialog-content">
+                <h3>NP Membership Details</h3>
+                <p>Designed for non-profit organizations looking for community support.</p>
+                <ul>
+                    <li>Free annual membership</li>
+                    <li>Directory listing</li>
+                    <li>Access to chamber community events</li>
+                </ul>
+                <button class="close-modal">Close</button>
+            </div>
+        </dialog>
+
+        <dialog id="modal-bronze" aria-label="Bronze Membership Details">
+            <div class="dialog-content">
+                <h3>Bronze Membership Details</h3>
+                <p>Great entry-level option for small businesses looking to grow.</p>
+                <ul>
+                    <li>Standard directory listing</li>
+                    <li>Invitation to monthly networking meetings</li>
+                    <li>Discounted event tickets</li>
+                </ul>
+                <button class="close-modal">Close</button>
+            </div>
+        </dialog>
+
+        <dialog id="modal-silver" aria-label="Silver Membership Details">
+            <div class="dialog-content">
+                <h3>Silver Membership Details</h3>
+                <p>Increased presence and promotional opportunities for growing businesses.</p>
+                <ul>
+                    <li>Enhanced directory listing with logo</li>
+                    <li>Spotlight eligibility on homepage</li>
+                    <li>Social media promotions twice a year</li>
+                </ul>
+                <button class="close-modal">Close</button>
+            </div>
+        </dialog>
+
+        <dialog id="modal-gold" aria-label="Gold Membership Details">
+            <div class="dialog-content">
+                <h3>Gold Membership Details</h3>
+                <p>Top-tier benefits for maximum business exposure and impact.</p>
+                <ul>
+                    <li>Featured position on homepage spotlights</li>
+                    <li>Premium directory placement</li>
+                    <li>Sponsorship priority for major events</li>
+                    <li>Quarterly social media features</li>
+                </ul>
+                <button class="close-modal">Close</button>
+            </div>
+        </dialog>
+    </main>
 
     <footer>
         <p>&copy; <span id="currentyear"></span> | Herriman Chamber of Commerce | Josue Maldonado | Herriman, Utah</p>
         <p>Last Modification: <span id="lastModified"></span></p>
     </footer>
+
+</body>
+</html>

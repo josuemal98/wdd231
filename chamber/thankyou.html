@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herriman Chamber of Commerce - Thank You</title>
+    <meta name="description" content="Thank you for joining the Herriman Chamber of Commerce. We have received your application.">
+    <meta name="author" content="Josue Maldonado">
+
+    <link rel="icon" href="favicon.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lucida+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css" media="(min-width: 640px)">
+
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/thankyou.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <span class="site-title">Herriman Chamber of Commerce</span>
+    </header>
+
+    <nav>
+        <button id="menuButton" aria-label="Toggle Navigation Menu">&#9776;</button>
+        <ul id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="thankyou-main">
+        <h2>Thank You for Your Application!</h2>
+        <p>We have successfully received your membership form. Below are the details you submitted:</p>
+
+        <section class="submission-details">
+            <h3>Application Summary</h3>
+            <div id="results"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Herriman Chamber of Commerce | Josue Maldonado | Herriman, Utah</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+    </footer>
+
+</body>
+</html>
