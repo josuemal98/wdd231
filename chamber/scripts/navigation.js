@@ -1,11 +1,22 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const menuButton = document.querySelector('#menuButton');
-    const navLinks = document.querySelector('#navLinks');
+document.addEventListener("DOMContentLoaded", () => {
+    const hamburgerBtn = document.getElementById("hamburgerBtn");
+    const primaryNav = document.getElementById("primaryNav");
 
-    if (menuButton && navLinks) {
-        menuButton.addEventListener('click', () => {
-            navLinks.classList.toggle('open');
-            menuButton.classList.toggle('open');
+    if (hamburgerBtn && primaryNav) {
+        hamburgerBtn.addEventListener("click", () => {
+            primaryNav.classList.toggle("open");
+            hamburgerBtn.classList.toggle("open");
         });
+    }
+
+    
+    const currentYear = document.getElementById("currentYear");
+    if (currentYear) {
+        currentYear.textContent = new Date().getFullYear();
+    }
+
+    const lastModified = document.getElementById("lastModified");
+    if (lastModified) {
+        lastModified.textContent = `Last Modified: ${document.lastModified}`;
     }
 });

@@ -227,3 +227,149 @@ footer {
     margin-top: 30px;
     font-size: 0.9rem;
 }
+
+
+.visit-banner {
+    background-color: var(--secondary-color, #1a365d);
+    color: #ffffff;
+    text-align: center;
+    padding: 12px;
+    margin: 10px 15px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+
+.gallery-grid {
+    display: grid;
+    gap: 20px;
+    padding: 15px;
+    grid-template-areas:
+        "card1"
+        "card2"
+        "card3"
+        "card4"
+        "card5"
+        "card6"
+        "card7"
+        "card8";
+}
+
+
+.card-1 { grid-area: card1; }
+.card-2 { grid-area: card2; }
+.card-3 { grid-area: card3; }
+.card-4 { grid-area: card4; }
+.card-5 { grid-area: card5; }
+.card-6 { grid-area: card6; }
+.card-7 { grid-area: card7; }
+.card-8 { grid-area: card8; }
+
+
+.card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.card h2 {
+    margin-top: 0;
+    color: var(--primary-color, #0b2240);
+    font-size: 1.25rem;
+}
+
+.card figure {
+    margin: 0 0 10px 0;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 3/2;
+    object-fit: cover;
+}
+
+.card address {
+    font-style: normal;
+    color: #64748b;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+}
+
+.card p {
+    flex-grow: 1;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+}
+
+.learn-more-btn {
+    background-color: var(--accent-color, #e65100);
+    color: #ffffff;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+#hamburgerBtn {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px;
+}
+
+
+#hamburgerBtn span:nth-child(2) {
+    display: none;
+}
+
+
+#hamburgerBtn.open span:nth-child(1) {
+    display: none;
+}
+
+#hamburgerBtn.open span:nth-child(2) {
+    display: inline;
+}
+
+
+#primaryNav {
+    display: none;
+}
+
+
+#primaryNav.open {
+    display: block;
+}
+
+#primaryNav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: var(--secondary-color, #1a365d);
+}
+
+#primaryNav li a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#primaryNav li a:hover,
+#primaryNav li a.active {
+    background-color: var(--accent-color, #e65100);
+}
