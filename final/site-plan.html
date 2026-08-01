@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site Plan for Valley Pet Rescue and Adoption Directory - BYU-Idaho WDD 231">
+    <title>Valley Pet Rescue - Site Plan</title>
+    <link rel="stylesheet" href="styles/site-plan.css">
+    <script src="scripts/site-plan.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Valley Pet Rescue - Site Plan</h1>
+        <h2>Individual Web Project Blueprint</h2>
+    </header>
+
+    <main>
+        <section class="plan-section">
+            <h2>1. Site Name</h2>
+            <p><strong>Selected Name:</strong> Valley Pet Rescue & Adoption Directory</p>
+            <p><strong>Reason for Selection:</strong> This name directly identifies the primary location in Salt Lake County and clearly communicates the core purpose of the web application: rescuing homeless animals and connecting them with adoptive families.</p>
+            <p><strong>Optional Domain Availability:</strong> <code>valleypetrescue.org</code></p>
+        </section>
+
+        <section class="plan-section">
+            <h2>2. Site Purpose</h2>
+            <p>The website serves as an interactive web portal for a local animal shelter and pet adoption organization in Salt Lake County. It promotes the motto <strong>"Adopt, Don't Shop"</strong> by providing dynamic, searchable pet listings for dogs, cats, and small animals, interactive modal dialogs with pet health and history details, educational care resources, and an adoption application form.</p>
+        </section>
+
+        <section class="plan-section">
+            <h2>3. Target Audience Scenarios</h2>
+            <div class="scenario-box">
+                <p><strong>Scenario 1:</strong> "I want to adopt a small, indoor-friendly dog that is good with children. How can I quickly filter animals by species, age, and size?"</p>
+            </div>
+            <div class="scenario-box">
+                <p><strong>Scenario 2:</strong> "I found a cat named Luna that I like. What is the adoption procedure, what vaccines does she have, and how do I submit an official adoption inquiry form?"</p>
+            </div>
+        </section>
+
+        <section class="plan-section">
+            <h2>4. Color Schema</h2>
+            <p>The site plan document and the final web application use this color palette to convey trust and warmth with high contrast for WCAG AA accessibility:</p>
+            
+            <div class="color-palette">
+                <div class="color-card primary-bg">
+                    <h3>Primary Color</h3>
+                    <code>#0b2240</code>
+                    <p>Header background, Main Title headings (H1, H2), and Footer background.</p>
+                </div>
+                <div class="color-card secondary-bg">
+                    <h3>Secondary Color</h3>
+                    <code>#1a365d</code>
+                    <p>Navigation bar background, Section accents, and secondary buttons.</p>
+                </div>
+                <div class="color-card accent-bg">
+                    <h3>Accent Color</h3>
+                    <code>#e65100</code>
+                    <p>Call to Action (CTA) buttons, highlighted badges, and active interactive elements.</p>
+                </div>
+                <div class="color-card bg-neutral">
+                    <h3>Background Color</h3>
+                    <code>#f4f4f4</code>
+                    <p>Main body background for comfortable contrast and readability.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="plan-section">
+            <h2>5. Typography</h2>
+            <p>The site uses a clean two-font stack strategy to ensure visual hierarchy and fast rendering across devices:</p>
+            <ul>
+                <li>
+                    <strong>Heading Font:</strong> <code>'Lucida Sans', 'Lucida Grande', Geneva, Verdana, sans-serif</code>
+                    <br>
+                    <em>Usage:</em> Applied to all main titles (<code>h1</code>, <code>h2</code>, <code>h3</code>) for structural definition.
+                </li>
+                <li>
+                    <strong>Body & UI Font:</strong> <code>system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif</code>
+                    <br>
+                    <em>Usage:</em> Applied to body copy, paragraphs, form labels, list items, and modal text for high legibility.
+                </li>
+            </ul>
+        </section>
+
+        <section class="plan-section">
+            <h2>6. Wireframes</h2>
+            <p>Structural layout sketches for the Home Page across responsive viewports:</p>
+
+            <div class="wireframe-grid">
+                <div class="wireframe-card">
+                    <h3>Small Viewport (Mobile)</h3>
+                    <div class="sketch-box">
+                        <div class="sketch-item header-item">[ Logo ] [ Hamburger ☰ ]</div>
+                        <div class="sketch-item hero-item">[ Hero Image + "Adopt Now" CTA ]</div>
+                        <div class="sketch-item card-item">[ Featured Pet 1 ]</div>
+                        <div class="sketch-item card-item">[ Featured Pet 2 ]</div>
+                        <div class="sketch-item content-item">[ Mission: "Adopt, Don't Shop" ]</div>
+                        <div class="sketch-item footer-item">[ Footer / Social Links ]</div>
+                    </div>
+                </div>
+
+                <div class="wireframe-card">
+                    <h3>Large Viewport (Desktop)</h3>
+                    <div class="sketch-box">
+                        <div class="sketch-item header-item">[ Logo | Nav Links: Home, Adopt, Join, Contact ]</div>
+                        <div class="sketch-item hero-item">[ Hero Banner with Overlay CTA Button ]</div>
+                        <div class="sketch-item grid-item">
+                            <span>[ Pet Card 1 ]</span>
+                            <span>[ Pet Card 2 ]</span>
+                            <span>[ Pet Card 3 ]</span>
+                        </div>
+                        <div class="sketch-item content-item">[ 2-Column: Shelter Mission | Local Weather API ]</div>
+                        <div class="sketch-item footer-item">[ Footer & Copyright ]</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Valley Pet Rescue & Adoption Directory | BYU-Idaho WDD231 | Josue Maldonado</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
