@@ -4,14 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Site Plan for Valley Pet Rescue and Adoption Directory - BYU-Idaho WDD 231">
+    <meta name="author" content="Josue Maldonado">
     <title>Valley Pet Rescue - Site Plan</title>
     <link rel="stylesheet" href="styles/site-plan.css">
     <script src="scripts/site-plan.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>Valley Pet Rescue - Site Plan</h1>
-        <h2>Individual Web Project Blueprint</h2>
+        <div class="header-container">
+            <h1>Valley Pet Rescue - Site Plan</h1>
+            <h2>Individual Web Project Blueprint</h2>
+            <button id="menu-toggle" aria-label="Toggle Navigation">
+                <span class="hamburger-icon">&#9776;</span>
+            </button>
+            <nav id="primary-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="adopt.html">Adoptable Pets</a></li>
+                    <li><a href="join.html">Application</a></li>
+                    <li><a href="site-plan.html" class="active">Site Plan</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
@@ -90,7 +104,7 @@
                 <div class="wireframe-card">
                     <h3>Small Viewport (Mobile)</h3>
                     <div class="sketch-box">
-                        <div class="sketch-item header-item">[ Logo ] [ Hamburger ☰ ]</div>
+                        <div class="sketch-item header-item">[ Logo ] [ Hamburger &#9776; ]</div>
                         <div class="sketch-item hero-item">[ Hero Image + "Adopt Now" CTA ]</div>
                         <div class="sketch-item card-item">[ Featured Pet 1 ]</div>
                         <div class="sketch-item card-item">[ Featured Pet 2 ]</div>
@@ -102,14 +116,14 @@
                 <div class="wireframe-card">
                     <h3>Large Viewport (Desktop)</h3>
                     <div class="sketch-box">
-                        <div class="sketch-item header-item">[ Logo | Nav Links: Home, Adopt, Join, Contact ]</div>
+                        <div class="sketch-item header-item">[ Logo | Nav Links: Home, Adopt, Join, Site Plan ]</div>
                         <div class="sketch-item hero-item">[ Hero Banner with Overlay CTA Button ]</div>
                         <div class="sketch-item grid-item">
                             <span>[ Pet Card 1 ]</span>
                             <span>[ Pet Card 2 ]</span>
                             <span>[ Pet Card 3 ]</span>
                         </div>
-                        <div class="sketch-item content-item">[ 2-Column: Shelter Mission | Local Weather API ]</div>
+                        <div class="sketch-item content-item">[ 2-Column: Shelter Mission | Adoption Info ]</div>
                         <div class="sketch-item footer-item">[ Footer & Copyright ]</div>
                     </div>
                 </div>
