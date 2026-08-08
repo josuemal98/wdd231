@@ -7,7 +7,7 @@
         "age": "2 years",
         "size": "Medium",
         "gender": "Female",
-        "image": "images/pets/luna.webp",
+        "image": "images/luna.webp",
         "description": "Luna is an energetic and loving Golden Retriever mix who loves outdoor games, swimming, and playing fetch.",
         "health": "Vaccinated, Spayed, Microchipped"
     },
@@ -19,7 +19,7 @@
         "age": "1 year",
         "size": "Small",
         "gender": "Male",
-        "image": "images/pets/milo.webp",
+        "image": "images/milo.jpeg",
         "description": "Milo is a playful orange tabby cat who enjoys sunbathing by windows, interactive laser toys, and warm naps.",
         "health": "Vaccinated, Neutered, Microchipped"
     },
@@ -31,7 +31,7 @@
         "age": "3 years",
         "size": "Large",
         "gender": "Male",
-        "image": "images/pets/oliver.webp",
+        "image": "images/oliver.webp",
         "description": "Oliver is a smart, loyal companion with basic agility training who thrives in active outdoor families.",
         "health": "Vaccinated, Neutered, Microchipped"
     },
@@ -43,7 +43,7 @@
         "age": "4 years",
         "size": "Small",
         "gender": "Female",
-        "image": "images/pets/bella.webp",
+        "image": "images/bella.jpeg",
         "description": "Bella is a gentle, affectionate vocal companion who loves curling up on laps during quiet evenings.",
         "health": "Vaccinated, Spayed, Microchipped"
     },
@@ -55,7 +55,7 @@
         "age": "1.5 years",
         "size": "Small",
         "gender": "Male",
-        "image": "images/pets/barnaby.webp",
+        "image": "images/barnaby.jpg",
         "description": "Barnaby is a soft and friendly lop rabbit who enjoys fresh greens, hay tunnels, and gentle petting.",
         "health": "Health Checked, Neutered"
     },
@@ -67,7 +67,7 @@
         "age": "5 months",
         "size": "Small",
         "gender": "Female",
-        "image": "images/pets/daisy.webp",
+        "image": "images/daisy.webp",
         "description": "Daisy is a curious, affectionate puppy who gets along wonderfully with kids and other household dogs.",
         "health": "Vaccinated (Puppy Series), Microchipped"
     },
@@ -79,7 +79,7 @@
         "age": "4 years",
         "size": "Large",
         "gender": "Male",
-        "image": "images/pets/charlie.webp",
+        "image": "images/charlie.jpeg",
         "description": "Charlie is a friendly yellow lab with a calm demeanor, great on leashes, and loves neighborhood walks.",
         "health": "Vaccinated, Neutered, Microchipped"
     },
@@ -91,7 +91,7 @@
         "age": "3 years",
         "size": "Medium",
         "gender": "Female",
-        "image": "images/pets/cleo.webp",
+        "image": "images/cleo.webp",
         "description": "Cleo is a majestic fluffy cat with a relaxed personality who enjoys quiet lounging and window views.",
         "health": "Vaccinated, Spayed, Microchipped"
     },
@@ -103,7 +103,7 @@
         "age": "1 year",
         "size": "Small",
         "gender": "Male",
-        "image": "images/pets/peanut.webp",
+        "image": "images/peanut.jpeg",
         "description": "Peanut is an adorable guinea pig who loves chewing on fresh Timothy hay and squeaking happily for treats.",
         "health": "Health Checked"
     },
@@ -115,7 +115,7 @@
         "age": "2.5 years",
         "size": "Medium",
         "gender": "Male",
-        "image": "images/pets/rocky.webp",
+        "image": "images/rocky.jpeg",
         "description": "Rocky is a sweet, goofy dog who loves playing frisbee in wide open yards and snuggling after playtime.",
         "health": "Vaccinated, Neutered, Microchipped"
     },
@@ -127,7 +127,7 @@
         "age": "2 years",
         "size": "Small",
         "gender": "Female",
-        "image": "images/pets/hazel.webp",
+        "image": "images/hazel.webp",
         "description": "Hazel is a sleek, intelligent cat who loves feather wand toys and finding cozy elevated nap spots.",
         "health": "Vaccinated, Spayed, Microchipped"
     },
@@ -139,7 +139,7 @@
         "age": "8 months",
         "size": "Small",
         "gender": "Male",
-        "image": "images/pets/ziggy.webp",
+        "image": "images/ziggy.webp",
         "description": "Ziggy is a lively little hamster who loves running on his wheel and exploring tunnel habitats.",
         "health": "Health Checked"
     },
@@ -151,7 +151,7 @@
         "age": "3.5 years",
         "size": "Medium",
         "gender": "Male",
-        "image": "images/pets/max.webp",
+        "image": "images/max.webp",
         "description": "Max is a highly intelligent, active dog who excels at learning new tricks and agility obstacle courses.",
         "health": "Vaccinated, Neutered, Microchipped"
     },
@@ -163,7 +163,7 @@
         "age": "5 years",
         "size": "Small",
         "gender": "Female",
-        "image": "images/pets/mimi.webp",
+        "image": "images/mimi.jpeg",
         "description": "Mimi is a gentle calico cat with a sweet temperament who loves relaxing on soft fleece blankets.",
         "health": "Vaccinated, Spayed, Microchipped"
     },
@@ -175,8 +175,20 @@
         "age": "2 years",
         "size": "Small",
         "gender": "Female",
-        "image": "images/pets/waffles.webp",
+        "image": "images/waffles.jpg",
         "description": "Waffles is a velvety-soft rabbit who loves hopping around indoor playpens and eating apple wood sticks.",
         "health": "Health Checked, Spayed"
+    }, 
+    {
+        "id":16,
+        "name": "Firulais",
+        "species": "Dog",
+        "breed": "mestizo",
+        "age": "2.5 years",
+        "size": "Medium",
+        "gender":"Male",
+        "image":"images/firulais.jpeg",
+        "description": "He came to the house all on his own. I'd guess he's around 2.5 years old, but I'm not sure. He must have grown up with a Latino family because he eats tortillas.",
+        "health": "He doesn't have his shots, but he's healthier than I am."
     }
 ]

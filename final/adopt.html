@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse available pets for adoption at Valley Pet Rescue. Filter by species and view detailed medical information.">
+    <meta name="author" content="Josue Maldonado">
+    <title>Valley Pet Rescue | Adoptable Pets</title>
+    
+    <link rel="stylesheet" href="styles/site-plan.css">
+    <script src="scripts/site-plan.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Valley Pet Rescue</h1>
+            <h2>Adopt, Don't Shop</h2>
+            <button id="menu-toggle" aria-label="Toggle Navigation">
+                <span class="hamburger-icon">&#9776;</span>
+            </button>
+            <nav id="primary-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="adopt.html" class="active">Adoptable Pets</a></li>
+                    <li><a href="join.html">Application</a></li>
+                    <li><a href="site-plan.html">Site Plan</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="plan-section">
+            <h2>Our Rescued Pets</h2>
+            <p>Filter through our rescue list to find animals looking for a loving home.</p>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-species="all">All Pets</button>
+                <button class="filter-btn" data-species="Dog">Dogs</button>
+                <button class="filter-btn" data-species="Cat">Cats</button>
+                <button class="filter-btn" data-species="Small Animal">Small Animals</button>
+            </div>
+        </section>
+
+        <section class="pet-display">
+            <div id="pet-cards-container" class="pet-grid"></div>
+        </section>
+    </main>
+
+    <dialog id="pet-modal">
+        <div class="modal-content">
+            <button id="close-modal" aria-label="Close details">&times;</button>
+            <div id="modal-details"></div>
+        </div>
+    </dialog>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Valley Pet Rescue & Adoption Directory | BYU-Idaho WDD231 | Josue Maldonado</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

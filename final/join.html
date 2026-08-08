@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Submit an adoption application to adopt a pet from Valley Pet Rescue.">
+    <meta name="author" content="Josue Maldonado">
+    <title>Valley Pet Rescue | Application Form</title>
+    
+    <link rel="stylesheet" href="styles/site-plan.css">
+    <script src="scripts/site-plan.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Valley Pet Rescue</h1>
+            <h2>Adopt, Don't Shop</h2>
+            <button id="menu-toggle" aria-label="Toggle Navigation">
+                <span class="hamburger-icon">&#9776;</span>
+            </button>
+            <nav id="primary-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="adopt.html">Adoptable Pets</a></li>
+                    <li><a href="join.html" class="active">Join</a></li>
+                    <li><a href="site-plan.html">Site Plan</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="plan-section">
+            <h2>Adoption Application</h2>
+            <p>Please complete this form to apply for adopting a pet from our shelter.</p>
+
+            <form action="thankyou.html" method="get" class="adoption-form">
+                <fieldset>
+                    <legend>Applicant Details</legend>
+
+                    <label for="fname">First Name *
+                        <input type="text" id="fname" name="fname" required>
+                    </label>
+
+                    <label for="lname">Last Name *
+                        <input type="text" id="lname" name="lname" required>
+                    </label>
+
+                    <label for="email">Email Address *
+                        <input type="email" id="email" name="email" placeholder="name@example.com" required>
+                    </label>
+
+                    <label for="phone">Phone Number *
+                        <input type="tel" id="phone" name="phone" required>
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Pet Preference</legend>
+
+                    <label for="petType">Interested In *
+                        <select id="petType" name="petType" required>
+                            <option value="" disabled selected>Select a category...</option>
+                            <option value="Dog">Dog</option>
+                            <option value="Cat">Cat</option>
+                            <option value="Small Animal">Small Animal</option>
+                        </select>
+                    </label>
+
+                    <label for="petName">Specific Pet Name (Optional)
+                        <input type="text" id="petName" name="petName">
+                    </label>
+
+                    <label for="housing">Housing Status *
+                        <select id="housing" name="housing" required>
+                            <option value="" disabled selected>Select housing type...</option>
+                            <option value="Own Home">Own Home</option>
+                            <option value="Renting Apartment">Renting Apartment</option>
+                            <option value="Renting House">Renting House</option>
+                        </select>
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Additional Information</legend>
+                    <label for="comments">Tell us about your home environment:
+                        <textarea id="comments" name="comments" rows="4"></textarea>
+                    </label>
+                </fieldset>
+
+                <input type="submit" value="Submit Application" class="cta-button">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Valley Pet Rescue & Adoption Directory | BYU-Idaho WDD231 | Josue Maldonado</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
